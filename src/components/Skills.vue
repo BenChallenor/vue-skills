@@ -4,7 +4,7 @@
     <ul>
       <li v-for="(data, index) in skills" :key='index'>{{index}}. {{data.skill}}</li>
     </ul>
-    <div v-bind:class="{alert: showAlert}"></div>
+    <div v-bind:class="{alert: showAlert, 'another-class': showClass}"></div>
     <!-- shows alert if true -->
   </div>
 </div>
@@ -22,7 +22,8 @@ export default {
           "skill": "Frontend Developer"
         }
       ],
-      showAlert: true
+      showAlert: true,
+      showClass: true
     }
   }
 }
@@ -38,4 +39,7 @@ export default {
   height: 30px;
 }
 
+.another-class {
+  border: 10px solid black;
+}
 </style>
